@@ -123,9 +123,17 @@
 		    }
 		}
 	    });
-	}
-    };
-
+	},
+	/**
+	 * Re-initialize the map
+	 */
+	doRefresh : function () {
+		return this.each(function () {
+			if(map){
+				map.invalidateSize();
+			}
+    	});
+	},
     /**
      * Bootstrap method, must be not modified
      */
